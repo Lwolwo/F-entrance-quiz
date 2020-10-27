@@ -1,0 +1,21 @@
+.member-list {
+  h1 {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .members-wrapper {
+    display: flex;
+
+    .member-card {
+      font-size: 16px;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #eeeeee;
+      border-radius: 5px;
+    }
+  }
+}
