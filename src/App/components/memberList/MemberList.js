@@ -18,6 +18,23 @@ class MemberList extends Component {
     };
   }
 
+  async fetchData() {
+    const result = await fetch('http://localhost:8080/memberList', {
+      method: 'get',
+    }).then((response) => {
+      if (response.status >= 200 && response.status <= 299) {
+        return response.json();
+      }
+      return Promise.reject();
+    });
+    this.setState({
+      memberList: result,
+    });
+  }
+  componentDidMount() {
+    this.fetchData();
+  }
+
   render() {
     const { memberList } = this.state;
     return (

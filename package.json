@@ -12,8 +12,12 @@
     "lint": "eslint \"src/\" --cache --fix --format table"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {

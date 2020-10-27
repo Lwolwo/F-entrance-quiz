@@ -9,6 +9,8 @@
 
   .members-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    
 
     .member-card {
       font-size: 16px;
@@ -16,6 +18,9 @@
       padding: 10px 20px;
       background: #eeeeee;
       border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
