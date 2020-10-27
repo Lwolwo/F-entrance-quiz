@@ -9,6 +9,13 @@ class Header extends Component {
     };
   }
 
+  componentDidMount() {
+    const list = sessionStorage.getItem('list');
+    this.setState({
+      sortMemberList: list ? list : []
+    })
+  }
+
   async sortMember() {
     const result = await fetch('http://localhost:8080/sortList', {
       method: 'get',
@@ -21,6 +28,7 @@ class Header extends Component {
     this.setState({
       sortMemberList: result,
     });
+    sessionStorage.setItem('list', result);
   }
 
   render() {
