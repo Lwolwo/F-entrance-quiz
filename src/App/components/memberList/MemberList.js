@@ -5,16 +5,7 @@ class MemberList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      memberList: [
-        {
-          name: '123',
-          id: '1',
-        },
-        {
-          name: '1234',
-          id: '2',
-        },
-      ],
+      memberList: []
     };
   }
 
