@@ -17,6 +17,7 @@ class Header extends Component {
   }
 
   async sortMember() {
+    // TODO GTB-工程实践: * 建议把数据请求提取到单独的service
     const result = await fetch('http://localhost:8080/sortList', {
       method: 'get',
     }).then((response) => {
@@ -34,6 +35,7 @@ class Header extends Component {
   render() {
     const { sortMemberList } = this.state;
     return (
+      // TODO GTB-知识点: * 没有使用语义标签，太多div
       <div className="container">
         <div className="header">
           <h1>分组列表</h1>
@@ -45,6 +47,7 @@ class Header extends Component {
           {sortMemberList.length !== 0 &&
             sortMemberList.map((item, index) => {
               return (
+                // TODO GTB-知识点: - div嵌套过深
                 <div className="group">
                   <div className="title">第{index + 1}组</div>
                   <div className="group-item">
